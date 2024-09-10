@@ -45,8 +45,8 @@ nav a {
     color: #424247;
     text-decoration: none;
 }
-ul{
-    list-style-type: none;
+.menus{
+    list-style: none;
 }
 
 /* Nav Bar */
@@ -89,7 +89,10 @@ nav{
     justify-content: center;
     background-position: center;
     background-size: cover;
-    border-radius: 1rem;
+    background-repeat: no-repeat;
+    border-radius: 1.5rem;
+    border: 2px solid black;
+    box-shadow: 0px 4px 4px #00000062;
 }
 .hero-texts{
     display: flex;
@@ -97,7 +100,6 @@ nav{
     align-items: center;
     text-align: center;
 }
-
 .hero-texts p{
     color: white;
     width: 65rem;
@@ -138,6 +140,39 @@ select{
     margin-left: 1.5rem;
 }
 
+/* Tours Section */
+.tours{
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10rem 0rem 10rem 0rem;
+}
+.tours-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.tours-content h2{
+    padding-bottom: 2rem;
+}
+.tours-text{
+    color: #131318af;
+    list-style-position: inside;
+    width: 90%;
+}
+.text2{
+    width: 83%;
+}
+.text1, .text2 li, .text3{
+    padding-bottom: 2rem;
+}
+.text3{
+    width: 76%;
+}
+
+
 
 /*-------------------------
 ------Media Query----------
@@ -148,21 +183,28 @@ select{
         padding-left: 8rem;
         padding-right: 8rem;
     }
+    .hero{
+        padding-bottom: 5rem;
+    }
     .hero-info-container{
         width: 75%;
+    }
+    /* Tours Section */
+    .tours{
+        padding: 10rem 8rem 10rem 8rem;
     }
 }
 @media only screen and (max-width: 600px){
     header{
         width: 100%;
         padding: 0rem 2rem;
-        min-height: 0rem;
     }
     .menus{
         display: none;
     }
     h1{
         font-size: 2.2rem;
+        padding-top: 4rem;
     }
     .hero-texts p{
         font-size: 1.4rem;
@@ -191,4 +233,25 @@ select{
         justify-content: center;
         
     }
+    p, li{
+        font-size: 1.4rem;
+    }
+    /* Tours Section */
+        .tours{
+            flex-wrap: wrap;
+            padding: 3rem 2rem;
+            width: 100%;
+        }
+        .tours-text{ 
+            width: 100%;
+        }
+        .tours-image img{
+            width: 100%;
+        }
+        .tours-content h2{
+            font-size: 2rem;
+        }
+        .tours-content button{
+            margin-bottom: 2rem;
+        }
 }
