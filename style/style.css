@@ -59,6 +59,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding-top: 5rem;
+    padding-bottom: 5rem;
     min-height: 8vh;
     
 }
@@ -88,6 +89,7 @@ nav{
     justify-content: center;
     background-position: center;
     background-size: cover;
+    border-radius: 1rem;
 }
 .hero-texts{
     display: flex;
@@ -134,4 +136,59 @@ select{
     font-size: 1.6rem;
     font-weight: 600;
     margin-left: 1.5rem;
+}
+
+
+/*-------------------------
+------Media Query----------
+---------------------------*/
+/* Hero Media */
+@media only screen and (max-width: 1169px){
+    header{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .hero-info-container{
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 600px){
+    header{
+        width: 100%;
+        padding: 0rem 2rem;
+        min-height: 0rem;
+    }
+    .menus{
+        display: none;
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    .hero-texts p{
+        font-size: 1.4rem;
+        width: 90%;
+    }
+    .hero-info-container{
+        width: 90%;
+    }
+    .hero-info{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-form{
+        margin-left: 0rem;
+    }
+    .inputs{
+        margin-bottom: 1rem;
+        width: 90%;
+        padding: 2rem 1.5rem;
+    }
+    .hero-btn{
+        width: 90%;
+        margin:0;
+        text-align: center;
+        justify-content: center;
+        
+    }
 }
