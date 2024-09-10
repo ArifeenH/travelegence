@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/c8f26dcb2c.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
+    
     <!-- HERO SECTION -->
      <header>
         <nav>
@@ -25,6 +28,30 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <section class="hero">
+            <div class="hero-texts">
+                <h1>Explore Your Travel</h1>
+                <p>Dolor sit amet consectetur. Nullam suspendisse vitae ultricies dolor adipiscing. In et odio enim ac quis sapien urna eu phasellus.</p>
+            </div>
+            <div class="hero-info-container">
+                <div class="hero-info">
+                    <form action="">
+                        <input class="inputs" placeholder="Location" type="text">
+                        <select name="time" class="info-form inputs">
+                            <option class="form-box" value="When" disabled selected hidden>When</option>
+                            <option class="form-box" value="Morning">Morning</option>
+                            <option class="form-box" value="Evening">Evening</option>
+                            <option class="form-box" value="Night">Night</option>
+                        </select>
+                        <select name="time" class="info-form inputs">
+                            <option class="form-box" value="type" disabled selected hidden>Select Type</option>
+                            <option class="form-box" value="Group">Group</option>
+                            <option class="form-box" value="Single">Single</option>
+                        </select>
+                    </form>
+                    <button class="btn-primary hero-btn"><i class="fa-solid fa-magnifying-glass" style="color: #fcfcfc; font-size: 2rem; margin-right: 0.5rem"></i>Find Now</button>
+                </div>
+            </div>
+        </section>
      </header>
-</body>
 </html>
