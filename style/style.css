@@ -187,7 +187,6 @@ select{
 }
 .destination-grid{
     display: grid;
-    grid-template-columns: 30.5rem 25rem 30.5rem 25rem;
     grid-template-rows: repeat(3, 28rem);
     grid-template-areas: 'maldives maldives indonesia indonesia'
                          'srilanka northAmerica northAmerica kashmir'
@@ -199,62 +198,47 @@ select{
     text-align: center;
 }
 .destination-text p{
-    padding: 3rem 25rem;
+    padding: 3rem 0rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.maldives{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 5.png'); 
+    grid-area: maldives;
+}
+.indonesia{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 8.png'); 
+    grid-area: indonesia;
+}
+.srilanka{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 6.png'); 
+    grid-area: srilanka;
+}
+.north-america{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 7.png'); 
+    grid-area: northAmerica;
+}
+.kashmir{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 9.png'); 
+    grid-area: kashmir;
+}
+.bangladesh{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 11.png'); 
+    grid-area: bangladesh;
+}
+.bandarban{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 10.png'); 
+    grid-area: bandarban;
 }
 .back-flex{
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 2rem;
-}
-.maldives{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 5.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    grid-area: maldives;
-}
-.indonesia{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 8.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: indonesia;
-}
-.srilanka{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 6.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: srilanka;
-}
-.north-america{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 7.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: northAmerica;
-}
-.kashmir{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 9.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: kashmir;
-}
-.bangladesh{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 11.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: bangladesh;
-}
-.bandarban{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/Images/Rectangle\ 10.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    grid-area: bandarban;
 }
 
 /*-------------------------
@@ -276,7 +260,12 @@ select{
     .tours{
         padding: 10rem 8rem 10rem 8rem;
     }
+    /* Destination Section */
+    .destination{
+        padding: 0rem 8rem;
+    }
 }
+/* Media query for smaller screen */
 @media only screen and (max-width: 600px){
     header{
         width: 100%;
@@ -331,10 +320,31 @@ select{
         .tours-image img{
             width: 100%;
         }
-        .tours-content h2{
+        h2{
             font-size: 2rem;
         }
         .tours-content button{
             margin-bottom: 2rem;
+        }
+        /* Destination Section */
+        h4{
+            font-size: 2rem;
+        }
+        .destination{
+            width: 100%;
+            padding: 0rem 2rem 3rem 2rem;
+        }
+        .destination-grid{
+            display: grid;
+            grid-template-rows: repeat(7, 28rem);
+            grid-template-areas: 'maldives'
+                                 'indonesia'
+                                 'srilanka'
+                                 'northAmerica'
+                                 'kashmir'
+                                 'bangladesh'
+                                 'bandarban';        
+            row-gap: 2rem;
+            column-gap: 2rem;
         }
 }
